@@ -7,10 +7,15 @@ import { AppComponent } from './app.component';
 //수동 component 추가
 import { ComponentOverviewComponent } from './cExample1.component';
 
+import { HeroChildComponent } from './hero-child.component';
+import { HeroParentComponent } from './hero-parent.component';
+
 @NgModule({
   declarations: [
     AppComponent,
-    ComponentOverviewComponent
+    ComponentOverviewComponent,
+    HeroChildComponent,
+    HeroParentComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,5 @@
 import { AppPage } from './app.po';
-import { browser, logging } from 'protractor';
+import { browser, by, element, logging } from 'protractor';
 
 describe('workspace-project App', () => {
   let page: AppPage;
@@ -20,4 +20,28 @@ describe('workspace-project App', () => {
       level: logging.Level.SEVERE,
     } as logging.Entry));
   });
+
+  //hero-child, parent test code 
+  const heroNames = ['Dr IQ', 'Magneta' , 'Bombasto'];
+  const masterName = 'Master';
+
+  it('should pass properties to children properly',() =>{
+    const parent = element(by.tagname('app-hero-child'));
+    const heroes = parent.all(by.tagName('app-hero-parent'));
+
+    for(let i=0;i< heroNames.length;i++){
+      const childTitle = heroes.get(i).element(by.tagName('h3')).getText();
+      const childDetail = heroes.get(i).element(by.tagName('p')).getText();
+
+      expect(childTitle)
+      expect(childDetail).toContain(masterName);
+
+    }
+
+  });
+
+
 });
+
+
+
