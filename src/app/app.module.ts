@@ -4,9 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+//수동 component 추가
+import { ComponentOverviewComponent } from './cExample1.component';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ComponentOverviewComponent
   ],
   imports: [
     BrowserModule,
