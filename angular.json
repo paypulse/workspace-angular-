@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "workspace-angular"
+  "defaultProject": "workspace-angular",
+  "cli": {
+    "analytics": "6ac68624-3b96-43ce-ae8b-a080fc8c0ccd"
+  }
 }
